@@ -2,11 +2,11 @@ jQuery(document).ready(function($) {
     $('.slider').slick({
       dots: false,
       infinite: true,
-      speed: 500,
+      speed: 600,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       arrows: true,
       responsive: [{
         breakpoint: 600,
