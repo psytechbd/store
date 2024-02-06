@@ -64,19 +64,20 @@
                 <a href="#" class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ONLINE
                     STORE</a>
                 <a href="#" class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">FOOD MENU</a>
-                
+
                 <div class="dropdown">
-                    <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ABOUT US</button>
+                    <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ABOUT
+                        US</button>
                     <div class="dropdown-content">
-                      <a href="#">Our History</a>
-                      <a href="#">Services</a>
-                      <a href="#">Airbnb</a>
-                      <a href="#">Employment</a>
-                      <a href="#">Events</a>
-                      <a href="#">Contact Us</a>
-                      <a href="railcam.html">Live Rail Camera</a>
+                        <a href="#">Our History</a>
+                        <a href="#">Services</a>
+                        <a href="#">Airbnb</a>
+                        <a href="#">Employment</a>
+                        <a href="#">Events</a>
+                        <a href="#">Contact Us</a>
+                        <a href="railcam.html">Live Rail Camera</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="flex">
@@ -272,16 +273,64 @@
             <h3 class="font-bold belvedere">PHONE </h3>
             <p>
                 670-435-3210<br>
-                <div class="text-2xl">
-                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                    
-                    
-                </div>
+            <div class="text-2xl">
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+
+
+            </div>
             </p>
         </div>
-        
+
     </div>
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><img src="images/arrow.png" class="w-[20px] rotate-90" alt=""></button>
+
+    <!-- Your content goes here -->
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            var mybutton = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Smooth scroll function
+        function smoothScroll(target, duration) {
+            var targetPosition = target.offsetTop;
+            var startPosition = window.pageYOffset;
+            var distance = targetPosition - startPosition;
+            var startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                var timeElapsed = currentTime - startTime;
+                var run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // When the user clicks on the button, smooth scroll to the top of the document
+        function topFunction() {
+            var target = document.documentElement;
+            smoothScroll(target, 1000); // Duration in milliseconds
+        }
+
+    </script>
 
 </body>
 
