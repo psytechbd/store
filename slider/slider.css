@@ -1,3 +1,47 @@
+body {
+    overflow-x: hidden; /* Hide vertical scrollbar */
+    
+  }
+  @font-face {
+    font-family: belvedere;
+    src: url(../font/Belvedere.ttf);
+  }
+  
+  .belvedere {
+    font-family: belvedere;
+  }
+
+  /* dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* dropdown */
+
 .slider {
     max-width: 1000px;
     margin: 0 auto;
