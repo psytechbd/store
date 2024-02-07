@@ -7,7 +7,7 @@ body {
   }
   @font-face {
     font-family: belvedere;
-    src: url(../font/Belvedere.ttf);
+    src: url(font/Belvedere.ttf);
   }
   
   .wave {
