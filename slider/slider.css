@@ -6,7 +6,7 @@
 }
 
 .slick-slide {
-    margin: 0 5px;
+    margin: 0;
 }
 
 .slick-list {
@@ -279,9 +279,7 @@ button.slick-prev:hover {
 }
 
 /* Dots */
-.slick-slider {
-    margin-bottom: 30px;
-}
+
 
 .slick-dots {
     position: absolute;
