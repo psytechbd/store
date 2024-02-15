@@ -3,7 +3,7 @@ body {
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     background-position: center;
-    
+        
   }
   @font-face {
     font-family: belvedere;
@@ -17,7 +17,7 @@ body {
     background-size: cover;
 }
 .container{
-    max-width: 1120px !important;
+    max-width: 1050px !important;
 }
 .btn:hover{
     background: #565656;
