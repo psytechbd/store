@@ -58,6 +58,10 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  
+.dropdown-content.show {
+  display: block;
+}
   #backToTopBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */

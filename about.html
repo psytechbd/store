@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="slider/slider.js"></script>
+    
+    
 </head>
 
 <body class="bg-[url(images/pattern.jpg)] min-h-screen bg-[#ffffff8c] bg-blend-overlay">
@@ -61,19 +63,19 @@
                     <a href="Menu.html"
                         class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">FOOD
                         MENU</a>
-                    <div class="dropdown">
-                        <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ABOUT
-                            US</button>
-                        <div class="dropdown-content">
-                            <a href="about.html">Our History</a>
-                            <a href="service.html">Services</a>
-                            <a href="airbnb.html">Airbnb</a>
-                            <a href="employment.html">Employment</a>
-                            <a href="events.html">Events</a>
-                            <a href="contact.html">Contact Us</a>
-                            <a href="railcam.html">Live Rail Camera</a>
+                        <div class="dropdown">
+                            <button id="dropdownButton" class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]" onclick="toggleDropdown()">ABOUT US</button>
+                            <div class="dropdown-content" id="dropdownContent">
+                                <a href="about.html">Our History</a>
+                                <a href="service.html">Services</a>
+                                <a href="airbnb.html">Airbnb</a>
+                                <a href="employment.html">Employment</a>
+                                <a href="events.html">Events</a>
+                                <a href="contact.html">Contact Us</a>
+                                <a href="railcam.html">Live Rail Camera</a>
+                            </div>
                         </div>
-                    </div>
+                        
                 </div>
                 <div class="max-w-[520px] m-auto p-8 mt-16">
                     <div class=" border-2 border-white">
@@ -245,8 +247,26 @@
             var target = document.documentElement;
             smoothScroll(target, 1000); // Duration in milliseconds
         }
+       
 
     </script>
+    <script>
+        function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdownContent");
+    dropdownContent.classList.toggle("show");
+}
+
+// Close dropdown when tapping outside
+document.addEventListener("click", function(event) {
+    var dropdownButton = document.getElementById("dropdownButton");
+    var dropdownContent = document.getElementById("dropdownContent");
+    if (event.target !== dropdownButton && !dropdownContent.contains(event.target)) {
+        dropdownContent.classList.remove("show");
+    }
+});
+
+        
+            </script>
     <!-- footer -->
 </body>
 
