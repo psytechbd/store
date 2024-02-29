@@ -254,21 +254,31 @@
     </script>
     <script>
         function toggleDropdown() {
-    var dropdownContent = document.getElementById("dropdownContent");
-    dropdownContent.classList.toggle("show");
-}
-
-// Close dropdown when tapping outside
-document.addEventListener("click", function(event) {
-    var dropdownButton = document.getElementById("dropdownButton");
-    var dropdownContent = document.getElementById("dropdownContent");
-    if (event.target !== dropdownButton && !dropdownContent.contains(event.target)) {
-        dropdownContent.classList.remove("show");
-    }
-});
-
-        
-            </script>
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.classList.toggle("show");
+        }
+    
+        // Close dropdown when tapping outside (for desktop)
+        document.addEventListener("click", function(event) {
+            var dropdownButton = document.getElementById("dropdownButton");
+            var dropdownContent = document.getElementById("dropdownContent");
+            if (event.target !== dropdownButton && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove("show");
+            }
+        });
+    
+        // Toggle dropdown on mobile devices
+        document.addEventListener("DOMContentLoaded", function() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                var dropdownButton = document.getElementById("dropdownButton");
+                dropdownButton.addEventListener("click", function() {
+                    toggleDropdown();
+                });
+            }
+        });
+    </script>
+    
     <!-- footer -->
 </body>
 
