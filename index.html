@@ -13,7 +13,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="slider/slider.js"></script>
     <style>
-
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
     </style>
 </head>
 
@@ -64,7 +66,7 @@
                 <a href="Menu.html" class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">FOOD
                     MENU</a>
 
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ABOUT
                         US</button>
                     <div class="dropdown-content">
@@ -76,7 +78,23 @@
                         <a href="contact.html">Contact Us</a>
                         <a href="railcam.html">Live Rail Camera</a>
                     </div>
-                </div>
+                </div> -->
+                    <div class="dropdown inline-block relative">
+                      <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">
+                        <span class="mr-1 uppercase">About us</span>
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                      </button>
+                      <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 z-50">
+                        <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="about.html">Our History</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="service.html">Services</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="airbnb.html">Airbnb</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="employment.html">Employment</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="events.html">Events</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="contact.html">Contact Us</a></li>
+                        <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="railcam.html">Live Rail Camera</a></li>
+                      </ul>
+                    </div>
             </div>
         </div>
         <div class="flex justify-center md:justify-end">
