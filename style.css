@@ -16,6 +16,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.dropdown-menu li a {
+  font-family: belvedere;
+  font-size: 10px;
+  border-bottom: 1px solid black;
+}
 .container{
     max-width: 1050px !important;
 }
