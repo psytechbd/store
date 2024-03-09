@@ -50,14 +50,28 @@
         </div>
     </div>
     <!-- header -->
+    <div class="dropdown absolute right-0 md:hidden sm:inline-block">
+        <button class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">
+          <i class="fas fa-bars    "></i>
+        </button>
+        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 z-50 text-left">
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="about.html">Our History</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="service.html">Services</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="airbnb.html">Airbnb</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="employment.html">Employment</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="events.html">Events</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="contact.html">Contact Us</a></li>
+          <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"  href="railcam.html">Live Rail Camera</a></li>
+        </ul>
+      </div>
     <!-- Banner -->
     <div
         class=" m-auto bg-[url('images/building.png')] bg-no-repeat bg-center bg-cover bg-[#0000006f] bg-blend-overlay ">
         <div class="md:flex">
-            <div class="logo w-full md:w-1/5 p-12 pt-0 md:ml-16">
+            <div class="logo w-2/3 m-auto md:w-1/5 p-12 pt-0 md:ml-16">
                 <a href="index.html"><img src="images/logowhite.png" alt=""></a>
             </div>
-            <div class="pt-6 text-center md:ml-auto md:pr-6">
+            <div class="pt-6 text-center md:ml-auto md:pr-6 hidden md:inline-block">
                 <a href="store.html"
                     class="btn rounded-none text-white font-bold text-sm md:text-xl bg-[#272B3E]">ONLINE
                     STORE</a>
@@ -127,6 +141,7 @@
         </h2>
     </div>
     <!-- Note -->
+    
     <!-- About -->
     <div class="bg-[white] container m-auto">
         <div class="text-center p-8 text-black">
@@ -188,27 +203,27 @@
     <!-- Gift -->
     <div class=" m-auto bg-[url('images/store.jpg')] bg-cover overflow-auto">
         <div class="mt-[200px] md:mt-[400px] pt-8 pb-8 md:p-8">
-            <div class="w-4/5 bg-[#0A182D] md:p-16 m-auto text-center opacity-90 pt-4">
+            <div class="w-3/5 bg-[#0A182D] md:p-16 m-auto text-center opacity-90 pt-4">
                 <img src="images/gift-icon.png" class="w-12 m-auto" alt="">
                 <h3 class="text-xl md:text-4xl text-white font-bold">GIFTS</h3>
-                <a href="" class="btn w-[250px] m-4 text-lg bg-[#5B1C0B] border-none rounded-none text-white">SHOP
+                <a href="" class="btn md:w-[250px] m-4 md:text-lg bg-[#5B1C0B] border-none rounded-none text-white">SHOP
                     NOW</a>
             </div>
         </div>
     </div>
     <!-- Gift -->
     <!-- Innovation -->
-    <div class=" m-auto bg-[#7C3D28]">
-        <div class="md:flex">
+    <div class="bg-[#7C3D28]">
+        <div class="container m-auto md:flex gap-8">
             <div class=" w-full md:w-1/2 pt-8  text-center">
-                <img src="images/peanutbutter.jpg" class="w-2/4 m-auto" alt="">
+                <img src="images/peanutbutter.jpg" class="w-2/3 m-auto" alt="">
                 <p class="text-xl md:text-2xl text-white mt-8 uppercase p-4 belvedere">Speciality spreads<br>
                     with local nuts</p>
                 <a href="" class="btn w-[250px] m-4 text-lg bg-[#0A182D] border-none rounded-none text-white">SHOP
                     NOW</a>
             </div>
-            <div class="md:w-1/4 mx-auto mb-8">
-                <div class="bg-white lg:p-8 md:pt-8 p-4 mt-8 text-center ">
+            <div class="w-full md:w-1/2 mx-auto md:pb-8 mb-8">
+                <div class="bg-white h-full lg:p-8 md:pt-8 p-4 mt-8 text-center ">
                     <h2 class="text-xl md:text-2xl text-[#5B1C0B] font-bold uppercase m-4 belvedere">Where
                         innovatioN<br>
                         meets flavor </h2>
@@ -289,12 +304,14 @@
     <div class=" m-auto wave grid relative">
         <!-- <p class="p-28"></p> -->
         <div class="h-[250px]"></div>
-        <img src="images/wagon.png" class="w-[350px] mt-5 absolute right-32 -rotate-12" alt="">
+        <img src="images/wagon.png" class="w-[350px] mt-9 absolute right-32 -rotate-12" alt="">
     </div>
-    <div class="  m-auto bg-[#DBCCB9] md:flex md:justify-around items-center  p-5">
-        <img src="images/logoblue.png" class="w-[200px] md:ml-[150px] m-auto md:m-0" alt="">
-        <div class=" md:flex md:gap-4 w-1/2 m-auto">
-            <div class="text-center md:text-left mt-8 ml-4 md:w-1/2 text-[#1F2937]">
+    <div class="bg-[#DBCCB9] p-8">
+        <div class="container m-auto md:flex justify-around">
+            <div class="text-center md:text-left  text-[#1F2937]">
+                <img src="images/logoblue.png" class="w-[200px] m-auto" alt="">
+            </div>
+            <div class="text-center md:text-left mt-12   text-[#1F2937]">
                 <h3 class="font-bold belvedere">ADDRESS </h3>
                 <p>
                     GENERAL STORE<br>
@@ -302,7 +319,7 @@
                     Arlington, Texas 76001
                 </p>
             </div>
-            <div class="text-center md:text-left mt-8 text-[#1F2937]">
+            <div class="text-center md:text-left mt-12     text-[#1F2937]">
                 <h3 class="font-bold belvedere">PHONE </h3>
                 <p>
                     670-435-3210<br>
@@ -311,11 +328,13 @@
                     <a href="#"><i class="fa-brands fa-square-instagram mr-1"></i></a>
                     <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
 
-
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class=" m-auto">
+        <p class="text-center p-4 text-md font-bold text-black">Copyright 2024 All Rights Reserved. <a href="privacy.html">Privacy Statement</a>  | <a href="tos.html"> Terms
+            of Service</a></p>
     </div>
     <div class="container m-auto">
         <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><img src="images/arrow.png"

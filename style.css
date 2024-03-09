@@ -15,6 +15,7 @@ body {
     background-color: #7C3D28;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 10px;
 }
 .dropdown-menu li a {
   font-family: belvedere;
@@ -71,6 +72,7 @@ body {
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  right:2px
 }
 
 
