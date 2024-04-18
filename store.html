@@ -131,6 +131,40 @@
         </div>
     </div>
     <!-- Banner -->
+
+    <!-- The Modal -->
+    <dialog id="my_modal_3" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle absolute right-2 top-2 text-xs p-0" onclick="closeModal()">X</button>
+            </form>
+            <img class="modal-content mt-6" id="modalImage">
+            <div id="modalContent" class="py-2"></div>
+            <div class="text-right">
+
+                <button class="btn btn-accent btn-sm">Order Now</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        var modal = document.getElementById("my_modal_3");
+
+        // Function to open modal with title
+        function openModal(title, description) {
+            var modalContent = document.getElementById("modalContent");
+            var modalImg = document.getElementById("modalImage");
+            modalImg.src = event.target.src;
+            modalContent.innerHTML = "<h3 class='font-bold text-lg'>" + title + "</h3><p class='py-2'>" + description + "</p>";
+
+            modal.showModal();
+        }
+
+        // Function to close modal
+        function closeModal() {
+            modal.close();
+        }
+    </script>
     <!-- T-shirt -->
     <div class=" m-auto bg-[white]">
         <div class="">
@@ -139,14 +173,14 @@
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-two.gif" alt=""  onclick="openModal('Title 2','Description 2')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-three.gif" alt=""  onclick="openModal('Title 3','Description 3')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 4','Description 4')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 5','Description 5')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 6','Description 6')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 7','Description 7')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 8','Description 8')">
                 </div>
             </div>
         </div>
@@ -160,14 +194,14 @@
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
                 </div>
 
             </div>
@@ -187,10 +221,10 @@
                     </div>
                     <div class="md:w-1/2">
                         <div class="md:grid grid-cols-2 gap-2">
-                            <img class="w-full h-auto mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="">
-                            <img class="w-full h-auto mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="">
-                            <img class="w-full h-auto mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="">
-                            <img class="w-full h-auto mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
 
                         </div>
 
@@ -208,14 +242,14 @@
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
-                    <img class=" w-full h-auto mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1')">
 
                 </div>
 
