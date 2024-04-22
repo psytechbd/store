@@ -177,7 +177,14 @@
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onclick="my_modal_3.close()">✕</button>
         </form>
         <div class="md:flex gap-4 mt-2">
-            <img id="modalImage" class=" md:w-1/2 object-cover " src="download.jpg" alt="">
+            <div>
+                <img id="modalImage" class=" md:w-[350px] h-[350px] object-cover " src="download.jpg" alt="">
+                <div class="flex gap-1 mt-1">
+                    <img id="modalImageThumbnail1" class=" w-[80px] h-[80px] object-cover cursor-pointer" src="images/peanutbutter.jpg" alt="" onclick="changeImage()">
+                    <img id="modalImageThumbnail2" class=" w-[80px] h-[80px] object-cover cursor-pointer" src="images/peanutbutter.jpg" alt="" onclick="changeImage()">
+                    <img id="modalImageThumbnail3" class=" w-[80px] h-[80px] object-cover cursor-pointer" src="images/peanutbutter.jpg" alt="" onclick="changeImage()">
+                </div>
+            </div>
             <div class="w-full md:w-1/2 mt-2 relative">
                 <div class="flex justify-between items-end">
                     <h3 id="modalTitle" class="text-2xl font-bold">TITLE</h3>
@@ -190,7 +197,7 @@
                             <span class="m-auto text-2xl font-thin">−</span>
                         </button>
                         <input type="number"
-                            class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                            class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700 "
                             name="custom-input-number" value="0"></input>
                         <button data-action="increment"
                             class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
@@ -248,16 +255,19 @@ const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const modalPrice = document.getElementById('modalPrice');
 
-function openModal(title, description, price) {
+function openModal(title, description, price, image2, image3) {
     modalTitle.innerText = title;
     modalDescription.innerText = description;
     modalPrice.innerText = `$${price}`;
-    modalImage.src = event.target.src
+    modalImage.src = event.target.src;
+    modalImageThumbnail1.src = event.target.src;
+    modalImageThumbnail2.src = image2;
+    modalImageThumbnail3.src = image3;
     my_modal_3.showModal();
-    
-    console.log(event.target.src)
 }
-
+ function changeImage(){
+    modalImage.src = event.target.src;
+ }
     
 </script>
 
@@ -270,14 +280,14 @@ function openModal(title, description, price) {
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-two.gif" alt=""  onclick="openModal('Title 2','Description 2', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-three.gif" alt=""  onclick="openModal('Title 3 Lorem Ipsam doller esen','Description 3', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 4','Description 4', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 5','Description 5', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 6','Description 6', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 7','Description 7', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 8','Description 8', '56')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-two.gif" alt=""  onclick="openModal('Title 2','Description 2', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/image-three.gif" alt=""  onclick="openModal('Title 3 Lorem Ipsam doller esen','Description 3', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 4','Description 4', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 5','Description 5', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 6','Description 6', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 7','Description 7', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt=""  onclick="openModal('Title 8','Description 8', '56','images/image-two.gif', 'images/image-three.gif')">
                 </div>
             </div>
         </div>
@@ -291,14 +301,14 @@ function openModal(title, description, price) {
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
                 </div>
 
             </div>
@@ -314,14 +324,14 @@ function openModal(title, description, price) {
                 </div>
                 <div class="md:flex justify-around gap-2 lg:p-8 md:pt-8 p-4">
                     <div>
-                        <img class="w-full h-full mb-4 md:mb-0 object-cover" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
+                        <img class="w-full h-full mb-4 md:mb-0 object-cover" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
                     </div>
                     <div class="md:w-1/2">
                         <div class="md:grid grid-cols-2 gap-2">
-                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                            <img class="w-full h-full object-cover mb-4 md:mb-0" src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
 , '56'
                         </div>
 
@@ -339,14 +349,14 @@ function openModal(title, description, price) {
                     <h2 class="text-xl text-[#09182D] font-bold uppercase belvedere">T-Shirts</h2>
                 </div>
                 <div class="md:grid grid-cols-4 justify-around gap-2 lg:p-8 md:pt-8 p-4">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
-                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
+                    <img class=" w-full h-full object-cover mb-4 md:mb-0 " src="images/peanutbutter.jpg" alt="" onclick="openModal('Title 1','Description 1', '56','images/image-two.gif', 'images/image-three.gif')">
 
                 </div>
 
