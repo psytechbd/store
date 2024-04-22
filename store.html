@@ -27,6 +27,9 @@
         .custom-number-input button:focus {
             outline: none !important;
         }
+        /* .modal-box {
+            max-width: 45rem;
+        } */
     </style>
 </head>
 
@@ -169,13 +172,13 @@
     </dialog> -->
    
 <dialog id="my_modal_3" class="modal">
-    <div class="modal-box">
+    <div class="modal-box max-w-3xl">
         <form method="dialog">
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onclick="my_modal_3.close()">✕</button>
         </form>
         <div class="md:flex gap-4 mt-2">
             <img id="modalImage" class=" md:w-1/2 object-cover " src="download.jpg" alt="">
-            <div class="w-full md:w-1/2 mt-2">
+            <div class="w-full md:w-1/2 mt-2 relative">
                 <div class="flex justify-between items-end">
                     <h3 id="modalTitle" class="text-2xl font-bold">TITLE</h3>
                     <h3 id="modalPrice" class="text-2xl text-green-400 font-bold">$8.99</h3>
@@ -197,7 +200,7 @@
                 </div>
                 <p class="font-bold">Description</p>
                 <p id="modalDescription" class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus iste nobis eos voluptate, soluta tempore asperiores atque repellendus temporibus quos eius doloribus</p>
-                <button class="btn btn-neutral my-2 px-8 w-full" onclick="alert('Order placed'), my_modal_3.close()">Order Now</button>
+                <button class="btn btn-neutral my-2 px-8 w-full absolute bottom-0" onclick="alert('Order placed'), my_modal_3.close()">Order Now</button>
             </div>
         </div>
     </div>
